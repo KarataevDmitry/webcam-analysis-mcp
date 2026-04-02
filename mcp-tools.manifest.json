@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "mcp_id": "webcam-analysis-mcp",
+  "title": "Webcam Analysis MCP",
+  "tools": [
+    {
+      "name": "analyze_burst_sequence",
+      "description": "Проанализировать серию кадров (burst) как квазии-видео: оценить динамику движения, выделить пики/сцены и вернуть структурированный отчёт."
+    },
+    {
+      "name": "pdf_capture_burst",
+      "description": "Сделать серию изображений страниц PDF. Сохраняет страницы как картинки в подпапку внутри workspace и возвращает JSON с путём и параметрами страниц."
+    },
+    {
+      "name": "ocr_image_batch",
+      "description": "Сделать OCR для серии изображений (страницы PDF или burst) через внешний tesseract и вернуть JSON по страницам."
+    },
+    {
+      "name": "analyze_audio_sequence",
+      "description": "Проанализировать WAV-файл: громкость, пики, долю тишины, активность речи/звука и таймлайн по окнам."
+    },
+    {
+      "name": "transcribe_audio_whisper",
+      "description": "Локальная транскрипция аудио через Whisper.net (whisper.cpp runtime). Поддерживаются WAV и WebM/MP4/M4A (через FFmpeg в PATH). Возвращает распознанный текст и сегменты с таймкодами."
+    },
+    {
+      "name": "analyze_av_sequence",
+      "description": "Комплексный анализ A/V-сессии: объединяет динамику движения из кадров и аудио-активность в одном отчёте."
+    }
+  ]
+}

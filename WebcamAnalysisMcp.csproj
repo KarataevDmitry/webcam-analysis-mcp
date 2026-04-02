@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers>win-x64;linux-x64</RuntimeIdentifiers>
     <SelfContained>true</SelfContained>
     <UseAppHost>true</UseAppHost>
     <LangVersion>14</LangVersion>
@@ -12,6 +12,21 @@
     <RootNamespace>WebcamAnalysisMcp</RootNamespace>
     <AssemblyName>WebcamAnalysisMcp</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="tools\**\*.cs" />
+    <Compile Remove="WebcamAnalysisMcp.Tests\**\*.cs" />
+    <None Remove="WebcamAnalysisMcp.Tests\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>WebcamAnalysisMcp.Tests</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>ExportMcpManifest</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\webcam-mcp-shared\WebcamMcp.Shared.csproj" />
