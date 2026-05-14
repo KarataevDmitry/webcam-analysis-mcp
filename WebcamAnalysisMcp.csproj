@@ -30,10 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\webcam-mcp-shared\WebcamMcp.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AIGuiders.WebcamMcp.Shared" Version="0.1.0" />
     <PackageReference Include="ModelContextProtocol" Version="0.8.0-preview.1" />
     <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="OpenCvSharp4" Version="4.13.0.20260225" />

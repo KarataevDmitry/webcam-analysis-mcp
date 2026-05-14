@@ -6,7 +6,7 @@ MCP-сервер **анализа и документов**: burst-видео, W
 
 ## Зависимости
 
-- Репозиторий **[webcam-mcp-shared](../webcam-mcp-shared)** в соседней папке.
+- NuGet-пакет **[AIGuiders.WebcamMcp.Shared](https://www.nuget.org/packages/AIGuiders.WebcamMcp.Shared)** (см. `WebcamAnalysisMcp.csproj`). Исходники: [webcam-mcp-shared](https://github.com/KarataevDmitry/webcam-mcp-shared).
 - **Tesseract** (для `ocr_image_batch`): `TESSERACT_PATH` или `C:\Program Files\Tesseract-OCR\tesseract.exe`.
 - **Whisper** (для `transcribe_audio_whisper`): модель ggml/gguf и `WHISPER_MODEL_PATH` или параметр `model_path`.
 - **FFmpeg** в PATH — для не-WAV в Whisper.
