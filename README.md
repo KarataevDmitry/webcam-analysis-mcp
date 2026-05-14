@@ -1,5 +1,7 @@
 # webcam-analysis-mcp
 
+Лицензия: **MIT** — см. [LICENSE](LICENSE).
+
 MCP-сервер **анализа и документов**: burst-видео, WAV, A/V-сессии, PDF→изображения, OCR (tesseract), Whisper. Windows, `stdio`, self-contained `win-x64`.
 
 ## Зависимости
